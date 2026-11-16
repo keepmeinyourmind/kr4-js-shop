@@ -8,6 +8,7 @@
   <link rel="icon" href="images/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/design.css">
   <script src="js/data.js" defer></script>
   <script src="js/main.js" defer></script>
   <script src="js/catalog.js" defer></script>
@@ -40,15 +41,6 @@
             <li class="site-nav__item">
               <a class="site-nav__link" href="contacts.html">Контакты</a>
             </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
-            </li>
-            <li class="site-nav__item">
-              <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
-            </li>
           <li class="site-nav__item"><a class="site-nav__link" href="cart.html">Корзина <span data-cart-count></span></a></li>
           </ul>
         </nav>
@@ -57,16 +49,21 @@
   </header>
 
   <main class="page" id="main" tabindex="-1">
-    <section class="hero">
-      <h1 class="hero__title">Техника, которая делает жизнь проще</h1>
-      <p class="hero__text">
-        Смартфоны, ноутбуки и гаджеты с гарантией 12 месяцев
-        и бесплатной доставкой от 5&nbsp;000&nbsp;руб.
-      </p>
-      <div class="hero__actions">
-        <a class="button button--primary" href="#popular">Перейти к товарам</a>
-        <a class="button button--secondary" href="order.html">Оставить заявку</a>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero__content">
+        <p class="hero__eyebrow">Техника для каждого дня</p>
+        <h1 class="hero__title" id="hero-title">Хорошие вещи<br>на каждый день.</h1>
+        <p class="hero__text">Смартфоны, ноутбуки и аудио — выбирайте технику, которая подходит именно вам.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="catalog.html">Смотреть каталог</a>
+          <a class="hero__link" href="#popular">Популярные товары <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="hero__note">Гарантия 12 месяцев <span aria-hidden="true"> / </span> Доставка от 5 000 ₽</p>
       </div>
+      <a class="hero__showcase" href="product.html" aria-label="Подробнее об iPhone 17 Pro Max">
+        <img src="images/product-1-800.jpg" alt="iPhone 17 Pro Max" width="800" height="600">
+        <span class="hero__product"><span>В центре внимания</span><strong>iPhone 17 Pro Max</strong><span>от 139 990 ₽</span></span>
+      </a>
     </section>
 
     <section class="section" id="advantages">
@@ -163,9 +160,7 @@
     <aside class="aside-info">
       <h2 class="aside-info__title">О магазине</h2>
       <p class="aside-info__text">
-        TechBox — учебный проект интернет-магазина техники. Сайт выполнен
-        в рамках контрольной работы №3 по дисциплине «Фронтенд и бэкенд разработка»:
-        Flexbox, CSS Grid, БЭМ и CSS-переменные без CSS-фреймворков.
+        TechBox — учебный магазин техники. Выбирайте подходящие устройства в каталоге и сохраняйте понравившиеся товары в избранное.
       </p>
     </aside>
   </main>
