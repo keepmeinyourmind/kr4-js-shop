@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Контактная информация магазина техники TechBox.">
+  <title>Контакты — TechBox</title>
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+  <script src="js/cart.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-image" src="images/logo.svg" alt="" width="28" height="28">
+        TechBox
+      </a>
+      <details class="site-menu">
+        <summary class="site-menu__toggle">
+          <span class="site-menu__icon" aria-hidden="true"></span>
+          <span>Меню</span>
+        </summary>
+        <nav class="site-nav" aria-label="Основная навигация">
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html">Главная</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="catalog.html">Каталог</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="order.html">Заявка</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#advantages">Преимущества</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#popular">Популярные товары</a>
+            </li>
+            <li class="site-nav__item">
+              <a class="site-nav__link" href="index.html#contacts">Обратная связь</a>
+            </li>
+          <li class="site-nav__item"><a class="site-nav__link" href="cart.html">Корзина <span data-cart-count></span></a></li>
+          </ul>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main class="page" id="main" tabindex="-1">
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <span class="breadcrumbs__separator" aria-hidden="true">—</span>
+      <span class="breadcrumbs__current">Контакты</span>
+    </nav>
+
+    <section class="section">
+      <h1 class="section__title">Контакты</h1>
+      <p>Свяжитесь с нами любым удобным способом.</p>
+      <ul class="contact-list">
+        <li class="contact-list__item">Телефон: <a href="tel:+79000000000">+7 (900) 000-00-00</a></li>
+        <li class="contact-list__item">E-mail: <a href="mailto:info@techbox.example">info@techbox.example</a></li>
+        <li class="contact-list__item">Адрес: г. Москва, ул. Учебная, д. 1 (учебный проект)</li>
+        <li class="contact-list__item">Часы работы: ежедневно с 10:00 до 20:00</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Как нас найти</h2>
+      <iframe class="contact-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A4c0e001c937c902e7363c65e42576e5b10b37491c9562b72b2091ea5d79f8857&amp;source=constructor" title="Карта: как найти магазин TechBox" loading="lazy"></iframe>
+    </section>
+
+    <section class="section" id="feedback">
+      <h2 class="section__title">Обратная связь</h2>
+      <p id="feedback-note">Учебная форма: данные проверяются в браузере и не отправляются на сервер. Все поля обязательны.</p>
+      <form class="order-form" id="order-form" action="#feedback" method="post" aria-describedby="feedback-note" novalidate>
+        <div class="order-form__field">
+          <label class="order-form__label" for="feedback-name">Имя</label>
+          <input class="order-form__input" id="feedback-name" name="name" type="text" autocomplete="given-name" minlength="2" required>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="feedback-email">E-mail</label>
+          <input class="order-form__input" id="feedback-email" name="email" type="email" autocomplete="email" required>
+        </div>
+        <div class="order-form__field order-form__field--wide">
+          <label class="order-form__label" for="feedback-comment">Сообщение</label>
+          <textarea class="order-form__textarea" id="feedback-comment" name="comment" rows="5" required></textarea>
+        </div>
+        <div class="order-form__actions">
+          <button class="button button--primary" type="submit">Проверить форму</button>
+        </div>
+      </form>
+      <p class="success-message" id="success-message" role="status" hidden>Форма проверена. Учебный проект: сообщение не отправлено на сервер.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__info">
+        <p class="site-footer__title">TechBox</p>
+        <p class="site-footer__text">Магазин техники и гаджетов</p>
+      </div>
+      <div class="site-footer__copy">
+        <p class="site-footer__text">&copy; 2026 TechBox. Учебный проект. Все права защищены.</p>
+        <p class="site-footer__text">Дисциплина: Фронтенд и бэкенд разработка</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#">&uarr; Наверх</a>
+</body>
+</html>
