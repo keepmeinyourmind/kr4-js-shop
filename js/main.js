@@ -65,3 +65,31 @@ if (orderSummary) {
   const total = cart.reduce((sum, id) => sum + products.find(product => product.id === id).price, 0);
   orderSummary.textContent = cart.length ? `В корзине: ${cart.length} шт. на сумму ${formatPrice(total)}. Заявка носит учебный характер.` : 'Корзина пуста — можно отправить заявку на консультацию.';
 }
+
+// На главной можно остановить ролик; при уменьшенной анимации показывается фото.
+const heroVideo = document.querySelector('#hero-video');
+const heroVideoToggle = document.querySelector('#hero-video-toggle');
+if (heroVideo && heroVideoToggle) {
+  const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+  function updateHeroVideo() {
+    if (motionPreference.matches) {
+      heroVideo.pause();
+      heroVideoToggle.hidden = true;
+    } else {
+      heroVideo.play().then(() => {
+        heroVideoToggle.hidden = false;
+        heroVideoToggle.textContent = 'Остановить видео';
+      }).catch(() => { heroVideoToggle.hidden = true; });
+    }
+  }
+  heroVideoToggle.addEventListener('click', () => {
+    if (heroVideo.paused) {
+      heroVideo.play().then(() => { heroVideoToggle.textContent = 'Остановить видео'; }).catch(() => {});
+    } else {
+      heroVideo.pause();
+      heroVideoToggle.textContent = 'Воспроизвести видео';
+    }
+  });
+  motionPreference.addEventListener('change', updateHeroVideo);
+  updateHeroVideo();
+}
