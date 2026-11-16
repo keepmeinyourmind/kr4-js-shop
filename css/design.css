@@ -1,3 +1,8 @@
+@font-face { font-family: 'Mona Sans'; src: url('../fonts/MonaSans-Regular.ttf') format('truetype'); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Mona Sans'; src: url('../fonts/MonaSans-Bold.ttf') format('truetype'); font-style: normal; font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('../fonts/Inter-Regular.ttf') format('truetype'); font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url('../fonts/Inter-Bold.ttf') format('truetype'); font-style: normal; font-weight: 700; font-display: swap; }
+
 /* Визуальная система TechBox */
 :root {
   --color-bg: #0b1120;
@@ -14,7 +19,7 @@
   --container-width: 1240px;
   color-scheme: dark;
 }
-body { background: var(--color-bg); color: var(--color-text); font-family: 'Avenir Next', 'Segoe UI', sans-serif; }
+body { background: var(--color-bg); color: var(--color-text); font-family: 'Mona Sans', 'Inter', sans-serif; }
 :focus-visible { outline-color: #9bb3ff; }
 a { color: #aabfff; }
 a:hover { color: #d2dcff; }
